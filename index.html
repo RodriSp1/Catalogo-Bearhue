@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BearHue - Catálogo de Peluches</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo-box">
+        <img src="logo.jpg" alt="Logo BearHue">
+      </div>
+      <h1>BearHue</h1>
+    </div>
+    <button id="btn-ver-carrito" class="btn-carrito-header">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span>Pedido (<strong id="contador-carrito">0</strong>)</span>
+    </button>
+  </header>
+
+  <main class="contenedor">
+    <section class="filtros">
+      <button class="filtro activo" data-cat="todos">Todos</button>
+      <button class="filtro" data-cat="caricaturas">Caricaturas</button>
+      <button class="filtro" data-cat="animales">Animales</button>
+      <button class="filtro" data-cat="gigantes">Gigantes</button>
+    </section>
+
+    <section id="catalogo" class="grid-productos"></section>
+
+    <section id="panel-pedido" class="panel-pedido">
+      <h2><i class="fa-solid fa-receipt"></i> Resumen de tu pedido</h2>
+      <ul id="lista-carrito"></ul>
+      <p id="carrito-vacio" class="vacio">Aún no agregas peluches a tu pedido.</p>
+
+      <div id="zona-total" class="zona-total" hidden>
+        <div class="fila-total">
+          <span>Total estimado:</span>
+          <strong id="total-precio">$0.00</strong>
+        </div>
+
+        <div class="caja-nota">
+          <label for="dedicatoria"><i class="fa-solid fa-pen-to-square"></i> Agrega tu nombre o nota de entrega (opcional):</label>
+          <input type="text" id="dedicatoria" placeholder="Ej. Soy Ana, entrega en el centro / Para regalo">
+
+          <label for="nota-generada">Nota lista para tu DM:</label>
+          <textarea id="nota-generada" rows="6" readonly></textarea>
+        </div>
+
+        <div class="botones-pedido">
+          <button type="button" id="btn-copiar" class="btn-secundario">
+            <i class="fa-regular fa-copy"></i> Copiar nota
+          </button>
+          <button type="button" id="btn-pedir" class="btn-instagram">
+            <i class="fa-brands fa-instagram"></i> Copiar y abrir DM en Instagram
+          </button>
+        </div>
+
+        <p id="aviso-copiado" class="aviso" hidden>Nota copiada al portapapeles. Solo pégala en el chat de BearHue.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-info">
+    <div class="footer-inner">
+      <p class="author"><strong>Creador:</strong> Rodrigo Santini</p>
+      <p class="career">Estudiante de Ingeniería de Software</p>
+      <p class="social">
+        <strong>Instagram:</strong> 
+        <a href="https://instagram.com/ronits.ss" target="_blank" rel="noopener noreferrer">@ronits.ss</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
